@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ model_name }} Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      background: #ff4da6;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+    form {
+      background: #ffffff;
+      display: inline-block;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input { padding: 8px; width: 200px; border: 1px solid #ccc; border-radius: 5px; margin-top: 4px; }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #ff4da6; }
+    .result { margin-top: 20px; font-size: 18px; color: #7f00ff; font-weight: bold; }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #ff4da6;
+      padding: 6px 15px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>{{ model_name }} Model - Iris Prediction</h2>
+  <form method="POST">
+    <label>Sepal Length:</label>
+    <input type="text" name="sepal_length" required>
+    <label>Sepal Width:</label>
+    <input type="text" name="sepal_width" required>
+    <label>Petal Length:</label>
+    <input type="text" name="petal_length" required>
+    <label>Petal Width:</label>
+    <input type="text" name="petal_width" required>
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if result %}
+    <div class="result">{{ result }}</div>
+  {% endif %}
+
+  <a href="/">🏠 Back to Home</a>
+</body>
+</html>

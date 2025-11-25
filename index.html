@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iris Classification Home</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .container {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+    h2 { margin-bottom: 15px; color: #ff4da6; }
+    p { font-size: 16px; margin-bottom: 25px; color: #4b0082; }
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    select:hover { border-color: #ff4da6; }
+    a {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      margin-top: 10px;
+      background: #38bdf8;
+      padding: 8px 20px;
+      border-radius: 8px;
+    }
+    a:hover { background: #7f00ff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🌸 Iris Classification App</h2>
+    <p>Predict Iris flower species using multiple ML algorithms!</p>
+    <label>Select Model:</label>
+    <select onchange="location = this.value;">
+      <option value="/predict/knn">KNN</option>
+      <option value="/predict/naive_bayes">Naive Bayes</option>
+      <option value="/predict/dt">Decision Tree</option>
+      <option value="/predict/rf">Random Forest</option>
+      <option value="/predict/adaboost">AdaBoost</option>
+      <option value="/predict/gb">Gradient Boosting</option>
+      <option value="/predict/xgb">XGBoost</option>
+      <option value="/predict/svc">SVC</option>
+    </select>
+    <a href="/about">Learn About This Project</a><br>
+    <a href="/contact">Contact</a>
+  </div>
+</body>
+</html>
